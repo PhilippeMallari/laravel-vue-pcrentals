@@ -1,27 +1,4 @@
-<!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
 <template>
-    <!--
-    This example requires updating your template:
-
-    ```
-    <html class="h-full bg-gray-50">
-    <body class="h-full">
-    ```
-  -->
-    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="w-full max-w-md space-y-8">
             <div>
                 <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -31,8 +8,7 @@
                 <p class="mt-2 text-center text-sm text-gray-600">
                     Or
                     {{ ' ' }}
-                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">start your 14-day free
-                        trial</a>
+                    <router-link :to="{name: 'Register'}" class="font-medium text-indigo-600 hover:text-indigo-500">Register for free</router-link>
                 </p>
             </div>
             <form class="mt-8 space-y-6" action="#" method="POST">
@@ -58,10 +34,6 @@
                             class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
                         <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
                     </div>
-
-                    <div class="text-sm">
-                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
-                    </div>
                 </div>
 
                 <div>
@@ -76,9 +48,7 @@
                 </div>
             </form>
         </div>
-    </div>
 </template>
-
 <script setup>
 import { LockClosedIcon } from '@heroicons/vue/20/solid'
 </script>
